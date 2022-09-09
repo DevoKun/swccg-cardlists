@@ -35,15 +35,15 @@ jobs:
           echo "Downloading latest json files"
           rm -f JSON/{Dark,Light,sets}.json
           if [ ! -f "JSON/Dark.json" ]; then
-            "curl -o "JSON/Dark.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json"
+            "wget -O JSON/Dark.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json"
           if [ ! -f "JSON/DarkLegacy.json" ]; then
-            "curl -o "JSON/DarkLegacy.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/DarkLegacy.json"
+            "wget -O JSON/DarkLegacy.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/DarkLegacy.json"
           if [ ! -f "JSON/Light.json" ]; then
-            "curl -o "JSON/Light.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Light.json"
+            "wget -O JSON/Light.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Light.json"
           if [ ! -f "JSON/LightLegacy.json" ]; then
-            "curl -o "JSON/LightLegacy.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/LightLegacy.json"
+            "wget -O JSON/LightLegacy.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/LightLegacy.json"
           if [ ! -f "JSON/sets.json" ]; then
-            "curl -o "JSON/sets.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/sets.json"
+            "wget -O JSON/sets.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/sets.json"
           #
           echo "Building SWListMaker"
           docker build --force-rm=true --no-cache \
