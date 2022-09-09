@@ -37,6 +37,8 @@ jobs:
           pwd
           ls -al
           echo
+          ls -al cardlists/
+          echo
           echo "Downloading latest json files"
           rm -f cardlists/JSON/{Dark,Light,sets}.json 
           wget -O cardlists/JSON/Dark.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json
