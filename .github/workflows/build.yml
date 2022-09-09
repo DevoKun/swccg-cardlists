@@ -30,8 +30,13 @@ jobs:
           echo "        $(aws --version)"
           #echo "Logging in to ECR"
           #eval "$(aws ecr get-login --no-include-email --region us-east-2)"
+          echo
+          pwd
           cd SWListMaker
           #
+          pwd
+          ls -al
+          echo
           echo "Downloading latest json files"
           rm -f cardlists/JSON/{Dark,Light,sets}.json 
           wget -O cardlists/JSON/Dark.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json
