@@ -1,0 +1,80 @@
+---
+
+name: Build Container
+
+on: 
+  push: 
+    branches: 
+      - main
+
+
+jobs:
+  SWListMaker: 
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@main
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+
+      - name: Build new image
+        run: |
+          echo "awscli: $(which aws)"
+          echo "        $(aws --version)"
+          echo "docker: $(which docker)"
+          echo "pip3..: $(which pip3)"
+          echo "Installing latest awscli"
+          sudo pip3 install awscli
+          echo "awscli: $(which aws)"
+          echo "        $(aws --version)"
+          #echo "Logging in to ECR"
+          #eval "$(aws ecr get-login --no-include-email --region us-east-2)"
+          cd SWListMaker
+          #
+          echo "Downloading latest json files"
+          rm -f JSON/{Dark,Light,sets}.json
+          if [ ! -f "JSON/Dark.json" ]; then
+            "curl -o "JSON/Dark.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json"
+          if [ ! -f "JSON/DarkLegacy.json" ]; then
+            "curl -o "JSON/DarkLegacy.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/DarkLegacy.json"
+          if [ ! -f "JSON/Light.json" ]; then
+            "curl -o "JSON/Light.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Light.json"
+          if [ ! -f "JSON/LightLegacy.json" ]; then
+            "curl -o "JSON/LightLegacy.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/LightLegacy.json"
+          if [ ! -f "JSON/sets.json" ]; then
+            "curl -o "JSON/sets.json" https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/sets.json"
+          #
+          echo "Building SWListMaker"
+          docker build --force-rm=true --no-cache \
+            -t SWListMaker:latest \
+            -f Dockerfile .
+          #  -t 230787692442.dkr.ecr.us-east-2.amazonaws.com/SWListMaker:latest \
+          #if [ $? == 0 ]; then
+          #  echo "Pushing Image to ECR"
+          #  docker push 230787692442.dkr.ecr.us-east-2.amazonaws.com/SWListMaker:latest
+          #fi
+          docker run -v $(pwd)/cardlists:/app/cardlists
+        #env:
+        #  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #  AWS_REGION: ${{ secrets.AWS_REGION }}
+        #  AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+
+      #- name: Deploy latest image
+      #  run: |
+      #    echo "Updating ECS Service"
+      #    aws ecs update-service \
+      #      --cluster swccg \
+      #      --service discordcardlinker \
+      #      --force-new-deployment
+      #  env:
+      #    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #    AWS_REGION: ${{ secrets.AWS_REGION }}
+      #    AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+
+
+

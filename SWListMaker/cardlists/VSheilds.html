@@ -1,0 +1,650 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Star Wars Cardlists - Virtual Shields</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="swccg.css" />
+<script type="text/javascript">
+PositionX = 10;
+PositionY = 10;
+defaultWidth  = 440;
+defaultHeight = 500;
+function popImageExtra(imageURL,imageTitle){
+     var AutoClose = 0;
+     var oTimeClose = 0;
+     var extraHTML = '';
+ 	   var imgWin = window.open('','swccgimage','scrollbars=no,resizable=1,width='+defaultWidth+',height='+defaultHeight+',left='+PositionX+',top='+PositionY);
+     if( !imgWin ) { return true; }
+     imgWin.document.write('<html><head><title>'+imageTitle+'<\/title><script type="text\/javascript">\n'+
+     		'function getRefToDivMod( divID, oDoc ) {\n'+
+          'if( !oDoc ) { oDoc = document; }\n'+
+			'if( document.layers ) {\n'+
+			'if( oDoc.layers[divID] ) { return oDoc.layers[divID]; } else {\n'+
+			'for( var x = 0, y; !y && x < oDoc.layers.length; x++ ) {\n'+
+			'y = getRefToDivNest(divID,oDoc.layers[x].document); }\n'+
+			'return y; } }\n'+
+			'if( document.getElementById ) { return oDoc.getElementById(divID); }\n'+
+			'if( document.all ) { return oDoc.all[divID]; }\n'+
+			'return document[divID];\n'+
+		'}\n'+
+		'function resizeWinTo() {\n'+
+			'if( !document.images.length ) { document.images[0] = document.layers[0].images[0]; }'+
+			'if( !document.images[0].height || window.doneAlready ) { return; }\n'+ //in case images are disabled
+			'var oH = getRefToDivMod( \'myID\' ); if( !oH ) { return false; }\n'+
+			'var oW = oH.clip ? oH.clip.width : oH.offsetWidth;\n'+
+			'var oH = oH.clip ? oH.clip.height : oH.offsetHeight; if( !oH ) { return false; }\n'+
+			'if( !oH || window.doneAlready ) { return; }\n'+ //in case images are disabled
+			'window.doneAlready = true;\n'+ //for Safari and Opera
+			'if(document.getElementsByTagName) {\n'+
+				'for( var l = document.getElementsByTagName(\'a\'), x = 0; l[x]; x++ ) {\n'+
+					'if(l[x].className==\'makeright\'&&!l[x].style.position){\n'+
+						'l[x].style.position=\'relative\';\n'+
+						'l[x].style.left=(document.images[0].width-(l[x].offsetWidth+l[x].offsetLeft))+\'px\';\n'+
+			'}}}\n'+
+			'var x = window; x.resizeTo( oW + 200, oH + 200 );\n'+
+			'var myW = 0, myH = 0, d = x.document.documentElement, b = x.document.body;\n'+
+			'if( x.innerWidth ) { myW = x.innerWidth; myH = x.innerHeight; }\n'+
+			'else if( d && d.clientWidth ) { myW = d.clientWidth; myH = d.clientHeight; }\n'+
+			'else if( b && b.clientWidth ) { myW = b.clientWidth; myH = b.clientHeight; }\n'+
+			'if( window.opera && !document.childNodes ) { myW += 16; }\n'+
+			'x.resizeTo( oW = oW + ( ( oW + 200 ) - myW ), oH = oH + ( (oH + 200 ) - myH ) );\n'+
+			'var scW = screen.availWidth ? screen.availWidth : screen.width;\n'+
+			'var scH = screen.availHeight ? screen.availHeight : screen.height;\n'+
+			'if( !window.opera ) { x.moveTo(Math.round((scW-oW)/2),Math.round((scH-oH)/2)); }\n'+
+			(oTimeClose?('window.setTimeout(\'window.close()\','+oTimeClose+');\n'):'')+
+		'}\n'+
+		'<\/script>'+
+		'<\/head><body onload="resizeWinTo();"'+(AutoClose?' onblur="self.close();"':'')+'>'+
+		(document.layers?('<layer left="0" top="0" id="myID">'):('<div style="position:absolute;left:0px;top:0px;" id="myID">'))+
+		'<img src='+imageURL+' alt="Loading image ..." title="" onload="resizeWinTo();">'+
+		(extraHTML?extraHTML:'')+(document.layers?'<\/layer>':'<\/div>')+'<\/body><\/html>');
+	imgWin.document.close();
+	if( imgWin.focus ) { imgWin.focus(); }
+	return false;
+}
+</script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+  <table class="sw" style="width:890px"  >
+      <tbody>
+      <tr> 
+         <td> 
+              <a href="http://www.swccgpc.com/">
+                  <img src="logo_swccgpc.gif" height="169" width="221px" alt="Star Wars CCG Logo"/>
+              </a>
+         </td> 
+         <td colspan="2" >  
+			<img src="images/vd_title.jpg" height="93px" width="735px" alt="Virtual Shields Card Set" style="border-style: solid; border-color: black; border-width: 1px"/> 
+         </td>
+      </tr>
+      <tr >
+       <td class="smo" style="width:175px; vertical-align:top"> 
+          <br/> 
+          <b>&nbsp;&nbsp;&gt JUMP TO: </b>
+          <br/>
+          <br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Premiere.html>Premiere</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=ANewHope.html>A New Hope</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Hoth.html>Hoth</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Dagobah.html>Dagobah</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=CloudCity.html>Cloud City</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=JabbasPalace.html>Jabba's Palace</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=SpecialEdition.html>Special Edition</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Endor.html>Endor</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=DeathStar2.html>Death Star 2</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Tatooine.html>Tatooine</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Coruscant.html>Coruscant</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Theed.html>Theed</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Premium.html>Premium</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=Reflections.html>Reflections</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock1.html>Virtual Block 1</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock2.html>Virtual Block 2</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock3.html>Virtual Block 3</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock4.html>Virtual Block 4</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock5.html>Virtual Block 5</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock6.html>Virtual Block 6</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock7.html>Virtual Block 7</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VBlock8.html>Virtual Block 8</a><br/>
+           &nbsp;&nbsp;&gt 
+          <a class="smo" href=VSheilds.html>Virtual Shields</a><br/>
+          <br/>
+          <br/>
+    	</td>
+      <td  rowspan="2"  style="width:372px; vertical-align:top">
+        <table class="sw"  style="table-layout: auto; margin-left: 1em; margin-right: 1em; width: 329px" >
+          <tbody>
+          <tr class="center"> 
+            <td class="title" colspan="3"> 
+              <p>
+               <b>Virtual Shields Card List &#8211; Light Side</b></p>
+            </td>
+          </tr>
+          <tr class="center">
+            <td colspan="3">
+              <p><b>&nbsp;</b></p>
+            </td>
+          </tr>
+          <tr class="center"> 
+            <td class="center" style="width:43px; background-color:#D0D0D0">
+             <b style="color:Black">Type</b>
+           </td>
+            <td class="center"  style="background-color:#D0D0D0">
+             <b style="color:Black">Card Name</b>
+           </td>
+            <td class="center" style="width:58px; background-color:#D0D0D0">
+             <b style="color:Black">Rarity</b>
+           </td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td class="type"> DEFENSIVE SHIELD
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Unless Inner Strength on table, opponent may use only one combat card per turn. While opponent has 2 Dark Jedi on Naboo, you lose no more than 2 Force to Force drains at opponent's Naboo sites. Let Them Make The First Move may target only droids and spies." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/affectmind.gif" onclick="return popImageExtra(this.href,'');">Affect Mind (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              R1
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  M'iiyoom Onith's game text is canceled.  Any docking bay Brangus exchanges with a card in Lost Pile is placed out of play.  While opponent has a non-unique alien, non-unique starfighter, or Dark Jedi in battle, opponent may not draw more than two battle destiny." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/anotherpatheticlifeformv.gif" onclick="return popImageExtra(this.href,'');">Another Pathetic Lifeform (Coruscant) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  M'iiyoom Onith's game text is canceled.  Any docking bay Brangus exchanges with a card in Lost Pile is placed out of play.  While opponent has a non-unique alien, non-unique starfighter, or Dark Jedi in battle, opponent may not draw more than two battle destiny." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/anotherpatheticlifeform.gif" onclick="return popImageExtra(this.href,'');">Another Pathetic Lifeform (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  Substituted battle destinies do not count against battle destiny limits.  If all your battle destinies were canceled (and not redrawn) your total battle destiny = 1.  Once per game, may play a Defensive Shield from under your Starting Effect." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/chasm.gif" onclick="return popImageExtra(this.href,'');">Chasm (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Once per game, may /\ an Immediate Effect. While opponent occupies no battleground systems, Mobilization Points is suspended. 'Missing' on Always Thinking With Your Stomach is treated as 'landspeed = 0 for remainder of turn.'" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/dontdothatagaintatooine.gif" onclick="return popImageExtra(this.href,'');">Don't Do That Again (Tatooine) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Once per game, may /\ an Immediate Effect. While opponent occupies no battleground systems, Mobilization Points is suspended. 'Missing' on Always Thinking With Your Stomach is treated as 'landspeed = 0 for remainder of turn.'" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/dontdothatagain.gif" onclick="return popImageExtra(this.href,'');">Don't Do That Again (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Cancels A Dangerous Time, Bad Feeling Have I, Responsibility Of Command and You Overestimate Their Chances. Unless [Virtual] Epic Duel on table, Force loss from epic duels is reduced to 0 and characters about to be placed out of play by a duel are instead lost." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/hecangoabouthisbusiness.gif" onclick="return popImageExtra(this.href,'');">He Can Go About His Business (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Ounee Ta is canceled. At opponent's Ralltiir and Renegade Planet sites, your Rebels are deploy -2 and your Force drains may not be modified or canceled by opponent. Your game text at opponent's <>Swamp and <>Jungle is canceled. Your characters present at opponent's <>Forest are immune to attrition." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/letskeepalittleoptimismherev.gif" onclick="return popImageExtra(this.href,'');">Let's Keep A Little Optimism Here (Death Star II) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Ounee Ta is canceled. At opponent's Ralltiir and Renegade Planet sites, your Rebels are deploy -2 and your Force drains may not be modified or canceled by opponent. Your game text at opponent's <>Swamp and <>Jungle is canceled. Your characters present at opponent's <>Forest are immune to attrition." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/letskeepalittleoptimismhere.gif" onclick="return popImageExtra(this.href,'');">Let's Keep A Little Optimism Here (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. While you occupy a Renegade planet location, operatives are forfeit = 0, operatives do not add to Force drains and your Force drains may not be reduced. Sleens do not cancel Force icons. Cannot be canceled." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/ouneetav.gif" onclick="return popImageExtra(this.href,'');">Ounee Ta (Premium) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. While you occupy a Renegade planet location, operatives are forfeit = 0, operatives do not add to Force drains and your Force drains may not be reduced. Sleens do not cancel Force icons. Cannot be canceled." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/ouneeta.gif" onclick="return popImageExtra(this.href,'');">Ounee Ta (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on any site. This location may not be targeted by Proton Bombs.  Death Star sites are immune to Expand The Empire.  Unless Death Star: Docking Bay 327 on table, Commence Primary Ignition is canceled." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/planetarydefenses.gif" onclick="return popImageExtra(this.href,'');">Planetary Defenses (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  While you occupy a battleground and opponent occupies less than two battlegrounds, cancel opponent's Force drains at non-battleground locations and opponent's Force retrieval." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/simpletricksandnonsense.gif" onclick="return popImageExtra(this.href,'');">Simple Tricks And Nonsense</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              C
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. It Can Wait may not be played. For opponent to deploy a card with ability for free, they must first use X Force, where X = 1/2 that card's printed deploy cost (round up). For opponent to deploy a card with ability for 0 Force, they must first use 1 Force. May not be canceled.(Original Concept by Michael Pistone - Kashyyyk Regionals 2004)(Errata Text - September 9th, 2009)" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/theprofessor.gif" onclick="return popImageExtra(this.href,'');">The Professor (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              R
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. 'Three' on An Unusual Amount Of Fear is treated as 'Four'. You lose no Force to Boonta Eve Podrace. Opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy three battlegrounds, Watto's Box is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/trafficcontrol.gif" onclick="return popImageExtra(this.href,'');">Traffic Control (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U2
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Whenever opponent excludes any character(s) from battle, they lose 2 Force. At end of opponent's turn, if you control two battlegrounds (a site and a system) and opponent deployed a card with ability and did not inititate a battle, may retrieve 1 Force." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/weaponsdisplay.gif" onclick="return popImageExtra(this.href,'');">Weapons Display (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              C
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  Colo Claw Fish is canceled.  Opponent must first use X Force to deploy a non-unique card (except a Jawa or Tusken Raider) to a location, where X = the number of copies of that card at that location.  [Reflections III] lightsaber weapon destiny draws cannot be increased above their printed value.(Errata Text - September 9th, 2009)" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/yavinsentry.gif" onclick="return popImageExtra(this.href,'');">Yavin Sentry (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U2
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Scanning Crew is canceled. If an 'insert' card was just inserted or revealed, it is canceled. You lose no Force to Boonta Eve Podrace, and opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy three battlegrounds, Watto's Box is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/yourinsightservesyouwellv.gif" onclick="return popImageExtra(this.href,'');">Your Insight Serves You Well (Death Star II) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31px"> 
+				<img src="images/LS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Scanning Crew is canceled. If an 'insert' card was just inserted or revealed, it is canceled. You lose no Force to Boonta Eve Podrace, and opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy three battlegrounds, Watto's Box is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Light/large/yourinsightservesyouwell.gif" onclick="return popImageExtra(this.href,'');">Your Insight Serves You Well (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          </tbody>
+        </table>
+       <td  rowspan="2" style="width:372px; vertical-align:top"> 
+       <table class="sw" style="table-layout: auto; margin-left: 1em; margin-right: 1em; width:329px" >
+          <tbody> 
+          <tr class="center">
+            <td class="title" colspan="3"> 
+              <p><b>Virtual Shields Card List &#8211; Dark Side</b></p>
+            </td>
+          </tr>
+          <tr class="center"> 
+            <td colspan="3"> 
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+          <tr class="center"> 
+            <td class="center" style="width:43px; background-color:#D0D0D0">
+             <b style="color:Black; font-size:16">Type</b>
+           </td>
+            <td class="center"  style="background-color:#D0D0D0">
+             <b style="color:Black; font-size:16">Card Name</b>
+           </td>
+            <td class="center" style="width:58px; background-color:#D0D0D0">
+             <b style="color:Black; font-size:16">Rarity</b>
+           </td>
+          </tr>
+          <tr> 
+            <td>&nbsp;</td>
+            <td class="type"> DEFENSIVE SHIELD
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. In order to play an Interrupt from Lost Pile, opponent must first stack it here (if possible) and use +1 Force for each card here, even if Interrupt is normally free." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/auselessgesture.gif" onclick="return popImageExtra(this.href,'');">A Useless Gesture (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  Substituted battle destinies do not count against battle destiny limits.  If all your battle destinies were canceled (and not redrawn) your total battle destiny = 1.  Once per game, may play a Defensive Shield from under your Starting Effect." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/abyss.gif" onclick="return popImageExtra(this.href,'');">Abyss (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table.  Unless present at a site, [Reflections III] Leia's game text is canceled.  Each Amidala stacked on a Political Effect is a senator.  Once per game, may take [Virtual Block 1] Astromech Shortage into hand from Reserve Deck; reshuffle." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/afterher.gif" onclick="return popImageExtra(this.href,'');">After Her! (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              R
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Colo Claw Fish is canceled. Opponent must first use X Force to deploy a non-unique card (except a Jawa) to a location, where X = the number of copies of that card at that location.(Errata Text - September 9th, 2009)" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/deathstarsentry.gif" onclick="return popImageExtra(this.href,'');">Death Star Sentry (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U1
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Outrider does not place Utinni Effects out of play. If opponent just retrieved Force using an Interrupt or Utinni Effect, you may stack that card here. Opponent's Force retrieval is reduced by X, where X = number of cards here" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/dotheyhaveacodeclearancev.gif" onclick="return popImageExtra(this.href,'');">Do They Have A Code Clearance? (Coruscant) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              R
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Outrider does not place Utinni Effects out of play. If opponent just retrieved Force using an Interrupt or Utinni Effect, you may stack that card here. Opponent's Force retrieval is reduced by X, where X = number of cards here" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/dotheyhaveacodeclearance.gif" onclick="return popImageExtra(this.href,'');">Do They Have A Code Clearance? (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Cancels Order To Engage and Scramble. Once per game, may /\ an Immediate Effect. While opponent occupies no battleground systems, Staging Areas is suspended. 'Missing' on Lost In The Wilderness is treated as 'landspeed = 0 for remainder of turn.'" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/fanfaretatooine.gif" onclick="return popImageExtra(this.href,'');">Fanfare (Tatooine) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Cancels Order To Engage and Scramble. Once per game, may take an Immediate Effect into hand from Reserve Deck; reshuffle. While opponent occupies no battleground systems, Staging Areas is suspended. 'Missing' on Lost In The Wilderness is treated as 'landspeed = 0 for remainder of turn.'" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/fanfare.gif" onclick="return popImageExtra(this.href,'');">Fanfare (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. If opponent moves from a location you occupy during your turn, they lose 2 Force. At end of opponent's turn, if you control two battlegrounds (a site and system) and opponent deployed a card with ability and did not initiate a battle, you may retrieve 1 Force." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/firepower.gif" onclick="return popImageExtra(this.href,'');">Firepower (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              C
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Unless Deep Hatred on table, opponent may use only one combat card per turn. While opponent has two Jedi on Naboo, you lose no more than 2 Force to Force drains at opponent's Naboo sites. We'll Handle This may target only droids and spies." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/ifindyourlackoffaithdisturbing.gif" onclick="return popImageExtra(this.href,'');">I Find Your Lack Of Faith Disturbing (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              R1
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Play on table. I'd Just As Soon Kiss A Wookiee may not be played. For opponent to deploy a card with ability for free, they must first use X Force, where X = 1/2 that card's printed deploy cost (round up). For opponent to deploy a card with ability for 0 Force, they must first use 1 Force.(Original concept by Michael Pistone - Kashyyyk Regionals 2004)(Errata Text - September 9th, 2009)" />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/imperialdetention.gif" onclick="return popImageExtra(this.href,'');">Imperial Detention</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              C
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. At opponent's Dantooine and Subjugated Planet sites, your Imperials are deploy -2 and your Force drains may not be modified or canceled by opponent. Your game text at opponent's <>Swamp and <>Jungle is canceled. Your characters present at opponent's <>Forest are immune to attrition." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/leavethemtomev.gif" onclick="return popImageExtra(this.href,'');">Leave Them To Me (Death Star II) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              C
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. At opponent's Dantooine and Subjugated Planet sites, your Imperials are deploy -2 and your Force drains may not be modified or canceled by opponent. Your game text at opponent's <>Swamp and <>Jungle is canceled. Your characters present at opponent's <>Forest are immune to attrition." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/leavethemtome.gif" onclick="return popImageExtra(this.href,'');">Leave Them To Me (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. While you occupy a Subjugated Planet location, operatives are forfeit = 0, operatives do not add to Force drains, and your Force drains may not be reduced. Nudjs do not cancel Force icons." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/noescapev.gif" onclick="return popImageExtra(this.href,'');">No Escape (Premium) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. While you occupy a Subjugated Planet location, operatives are forfeit = 0, operatives do not add to Force drains, and your Force drains may not be reduced. Nudjs do not cancel Force icons." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/noescape.gif" onclick="return popImageExtra(this.href,'');">No Escape (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. 'Three' on Fear Is My Ally is treated as 'Four'. You lose no Force to Boonta Eve Podrace. Opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy more battlegrounds than opponent, I Did It! is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/reactorterminal.gif" onclick="return popImageExtra(this.href,'');">Reactor Terminal (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U2
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Cancels Beggar, Don't Underestimate Our Chances, and Frozen Assets. Maneuvering Flaps and S-Foils are suspended where you have either a weapon present or a starship (or vehicle) with maneuver > 3 present." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/wellletfateadecidehuh.gif" onclick="return popImageExtra(this.href,'');">We'll Let Fate-a Decide, Huh? (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Oola's game text is canceled. While opponent has a non-unique alien, non-unique starfighter, or Jedi in battle, opponent may not draw more than two battle destiny. Any docking bay that Ketwol exchanges with a card with a card in Lost Pile is placed out of play." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/wipethemoutallofthemv.gif" onclick="return popImageExtra(this.href,'');">Wipe Them Out, All Of Them (Coruscant) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. Oola's game text is canceled. While opponent has a non-unique alien, non-unique starfighter, or Jedi in battle, opponent may not draw more than two battle destiny. Any docking bay that Ketwol exchanges with a card with a card in Lost Pile is placed out of play." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/wipethemoutallofthem.gif" onclick="return popImageExtra(this.href,'');">Wipe Them Out, All Of Them (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. If an 'insert' card was just inserted or revealed, it is canceled. You lose no Force to Boonta Eve Podrace, and opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy more battlegrounds than opponent, I Did It! is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/youcannothideforeverv.gif" onclick="return popImageExtra(this.href,'');">You Cannot Hide Forever (Death Star II) (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              U
+            </td>
+          </tr>
+          <tr> 
+            <td class="center" style="width:31"> 
+				<img src="images/DS/defensive_shield.gif" height="21px" width="22px" alt="Plays on table. If an 'insert' card was just inserted or revealed, it is canceled. You lose no Force to Boonta Eve Podrace, and opponent's retrieval from Boonta Eve Podrace may not be canceled. While you occupy more battlegrounds than opponent, I Did It! is suspended." />
+            </td>
+            <td class="left" >
+              <a href="images/starwars/VirtualDS-Dark/large/youcannothideforever.gif" onclick="return popImageExtra(this.href,'');">You Cannot Hide Forever (V)</a>
+            </td>
+            <td class="center" style="width:43px"> 
+              PM
+            </td>
+          </tr>
+          </tbody> 
+        </table>
+          <br/>
+          <br/>
+          <b><a href="#Top">TOP</a></b> 
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</body>
+</html>
