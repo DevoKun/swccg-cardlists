@@ -21,8 +21,6 @@ jobs:
       - name: Download JSON
         run: |
           cd SWListMaker
-          echo
-          echo "Downloading latest json files"
           mkdir cardlists\\JSON
           Invoke-WebRequest https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json -Outfile cardlists\\JSON\\Dark.json
           Invoke-WebRequest https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/DarkLegacy.json -Outfile cardlists\\JSON\\DarkLegacy.json
