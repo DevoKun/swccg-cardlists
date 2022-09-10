@@ -48,7 +48,11 @@ jobs:
           wget -O JSON/LightLegacy.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/LightLegacy.json
           wget -O JSON/sets.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/sets.json
           #
+          echo
+          pwd
           cd ..
+          pwd
+          echo
           #
           echo "Building SWListMaker"
           docker build --force-rm=true --no-cache \
