@@ -50,7 +50,7 @@ jobs:
           #
           echo "Building SWListMaker"
           docker build --force-rm=true --no-cache \
-            -t SWListMaker:latest \
+            -t swlistmaker:latest \
             -f Dockerfile .
           #  -t 230787692442.dkr.ecr.us-east-2.amazonaws.com/SWListMaker:latest \
           #if [ $? == 0 ]; then
