@@ -9,12 +9,13 @@ namespace SWListMaker
     public partial class Form1 : Form
     {
     
-        public Dictionary<string, string> openWith = new Dictionary<string, string>() { get; set; };
-        public string BaseDir = Path.Combine(["SWListMaker", "cardlists") { get; };
+        public Dictionary<string, string> setPages = new Dictionary<string, string>() { get; set; };
+        public string BaseDir = new string() { get; };
     
         public Form1()
         {
             InitializeComponent();
+            BaseDir = Path.Combine(["SWListMaker", "cardlists");
         }
 
         private void button1_Click(object sender, EventArgs e)
