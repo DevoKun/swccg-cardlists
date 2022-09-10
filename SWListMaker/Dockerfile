@@ -9,8 +9,10 @@
 
 ##
 ## Build
+## .NETFramework,Version=v4.8
 ##
-FROM mcr.microsoft.com/dotnet/core/sdk AS build-env
+#FROM mcr.microsoft.com/dotnet/core/sdk AS build-env
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS build-env
 WORKDIR /app
 
 ## Copy csproj and restore as distinct layers
