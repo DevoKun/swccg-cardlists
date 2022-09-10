@@ -40,7 +40,7 @@ jobs:
           ls -al cardlists/
           echo
           echo "Downloading latest json files"
-          test -d JSON || mkdir cardslists/JSON
+          test -d JSON || mkdir JSON
           rm -f cardlists/JSON/{Dark,Light,sets}.json ; true
           wget -O cardlists/JSON/Dark.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/Dark.json
           wget -O cardlists/JSON/DarkLegacy.json https://raw.githubusercontent.com/swccgpc/swccg-card-json/main/DarkLegacy.json
